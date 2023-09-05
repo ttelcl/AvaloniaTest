@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E6716356-5A4F-4D76-8478-255918410AD0}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BE5CCDF-A7EA-4F17-848F-0C822496BA2F}
+	EndGlobalSection
+EndGlobal
