@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:AvaloniaApplication1.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="350"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaApplication1.Views.MainView"
              x:DataType="vm:MainViewModel">
   <Design.DataContext>
@@ -28,6 +28,38 @@
       <Border Margin="5" CornerRadius="15" Background="#44ffffff">
         <TextBlock Text="Three" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
       </Border>
+
+      <SplitButton Content="Content" HorizontalAlignment="Stretch">
+        <SplitButton.Flyout>
+          <MenuFlyout Placement="Bottom">
+            <MenuItem Header="Item 1">
+              <MenuItem Header="Subitem 1" />
+              <MenuItem Header="Subitem 2" />
+              <MenuItem Header="Subitem 3" />
+            </MenuItem>
+            <MenuItem Header="Item 2"
+                      InputGesture="Ctrl+A" />
+            <MenuItem Header="Item 3" />
+          </MenuFlyout>
+        </SplitButton.Flyout>
+      </SplitButton>
+
+      <Expander VerticalAlignment="Top" HorizontalAlignment="Stretch" >
+        <Expander.Header>
+          Hidden Search
+        </Expander.Header>
+        <Grid RowDefinitions="*,*" ColumnDefinitions="100,*">
+          <TextBlock Grid.Row="0" Grid.Column="0"
+                      VerticalAlignment="Center">Search</TextBlock>
+          <TextBox Grid.Row="0" Grid.Column="1"
+                    Watermark="Search text" Width="190" />
+          <TextBlock Grid.Row="1" Grid.Column="0"
+                      VerticalAlignment="Center">Case sens?</TextBlock>
+          <CheckBox Grid.Row="1" Grid.Column="1" />
+        </Grid>
+      </Expander>
+
+      <ButtonSpinner ButtonSpinnerLocation="Right" Content="42"></ButtonSpinner>
 
     </StackPanel>
     <Button HorizontalAlignment="Center" VerticalAlignment="Center">Click me!</Button>
