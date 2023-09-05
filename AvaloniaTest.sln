@@ -8,9 +8,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaApplication1", "AvaloniaApplication1\AvaloniaApplication1.csproj", "{56716359-59CE-4856-B754-7ED041027DE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaApplication1.Desktop", "AvaloniaApplication1.Desktop\AvaloniaApplication1.Desktop.csproj", "{B0B57D56-5B9E-458E-88EB-29BFF1510BFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{20CA0CDA-EED1-4D53-A369-EF6F03C55472}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56716359-59CE-4856-B754-7ED041027DE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56716359-59CE-4856-B754-7ED041027DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56716359-59CE-4856-B754-7ED041027DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56716359-59CE-4856-B754-7ED041027DE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B57D56-5B9E-458E-88EB-29BFF1510BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B57D56-5B9E-458E-88EB-29BFF1510BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B57D56-5B9E-458E-88EB-29BFF1510BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B57D56-5B9E-458E-88EB-29BFF1510BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{56716359-59CE-4856-B754-7ED041027DE8} = {20CA0CDA-EED1-4D53-A369-EF6F03C55472}
+		{B0B57D56-5B9E-458E-88EB-29BFF1510BFF} = {20CA0CDA-EED1-4D53-A369-EF6F03C55472}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1BE5CCDF-A7EA-4F17-848F-0C822496BA2F}
