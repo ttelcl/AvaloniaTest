@@ -44,7 +44,7 @@
         </SplitButton.Flyout>
       </SplitButton>
 
-      <Expander VerticalAlignment="Top" HorizontalAlignment="Stretch" >
+      <Expander VerticalAlignment="Top" HorizontalAlignment="Stretch" MinHeight="24">
         <Expander.Header>
           Hidden Search
         </Expander.Header>
