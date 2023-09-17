@@ -29,6 +29,12 @@ public class Thingy
 
   public int Sequence { get; init; }
 
-  public bool IsChecked { get; set; }
-
+  public bool IsChecked {
+    get => _isChecked;
+    set {
+      _isChecked = value;
+      Debug.WriteLine($"Thingy {Id} / {Sequence} Checked = {_isChecked}");
+    }
+  }
+  private bool _isChecked;
 }

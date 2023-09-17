@@ -16,7 +16,7 @@
     <StackPanel Orientation="Horizontal">
     </StackPanel>
     <ListBox ItemsSource="{Binding Things}" SelectedItem="{Binding SelectedThingy}">
-      
+
     </ListBox>
   </StackPanel>
 </UserControl>

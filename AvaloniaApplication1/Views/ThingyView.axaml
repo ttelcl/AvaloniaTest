@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaApplication1.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="200"
+             x:Class="AvaloniaApplication1.Views.ThingyView"
+             x:DataType="vm:ThingyViewModel">
+  <Grid ColumnDefinitions="400,40,*" Background="#44006600">
+    <Border Grid.Column="0">
+      <Label Content="{Binding Id}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+    </Border>
+    <Border Background="#44999999" Grid.Column="1">
+      <Label Content="{Binding Sequence}" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+    </Border>
+    <Border Grid.Column="2">
+      <CheckBox IsChecked="{Binding IsChecked}" VerticalAlignment="Bottom" Margin="10,0" CornerRadius="6">Checked</CheckBox>
+    </Border>
+  </Grid>
+</UserControl>

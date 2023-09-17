@@ -16,6 +16,10 @@
     <Style Selector=":is(Panel).bgTranslucentDarkGreen">
       <Setter Property="Background" Value="#44006600"/>
     </Style>
+    <Style Selector="ListBoxItem">
+      <!-- Without the following there is a huge padding (12,9,12,12) around each item in a ListBox -->
+      <Setter Property="Padding" Value="1,1"/>
+    </Style>
   </UserControl.Styles>
   <Design.DataContext>
     <!-- This only sets the DataContext for the previewer in an IDE,
