@@ -7,7 +7,16 @@
              x:Class="AvaloniaApplication1.Views.ThingyListView"
              x:DataType="vm:ThingyListViewModel">
   <StackPanel Orientation="Vertical">
-    <Label>ThingyListViewModel</Label>
-    <Label Content="{Binding Things.Count}"/>
+    <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" MinHeight="60" Classes="bgTranslucentDarkGreen">
+      <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right">ThingyListViewModel</Label>
+      <Label Grid.Column="1" Grid.Row="0" Content="{Binding Things.Count}"/>
+      <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" MinHeight="24" Padding="5" Content="{Binding SelectedThingy.Id}"/>
+      <Label Grid.Column="1" Grid.Row="1" MinHeight="24" Padding="5" Content="{Binding SelectedThingy.Sequence}"/>
+    </Grid>
+    <StackPanel Orientation="Horizontal">
+    </StackPanel>
+    <ListBox ItemsSource="{Binding Things}" SelectedItem="{Binding SelectedThingy}">
+      
+    </ListBox>
   </StackPanel>
 </UserControl>

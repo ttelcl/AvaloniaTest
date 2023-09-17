@@ -13,6 +13,9 @@
       <Setter Property="CornerRadius" Value="20"/>
       <Setter Property="MinHeight" Value="30"/>
     </Style>
+    <Style Selector=":is(Panel).bgTranslucentDarkGreen">
+      <Setter Property="Background" Value="#44006600"/>
+    </Style>
   </UserControl.Styles>
   <Design.DataContext>
     <!-- This only sets the DataContext for the previewer in an IDE,
@@ -26,7 +29,7 @@
                HorizontalAlignment="Center"
                VerticalAlignment="Center"
                DockPanel.Dock="Top"/>
-    <StackPanel MinWidth="300" Background="#44006600">
+    <StackPanel MinWidth="300" Classes="bgTranslucentDarkGreen">
       <Border Classes="rounded" Background="#44000000">
         <TextBlock Text="One" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
       </Border>

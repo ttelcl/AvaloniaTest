@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using AvaloniaApplication1.DataModel;
 using AvaloniaApplication1.Services;
 
+using ReactiveUI;
+
 namespace AvaloniaApplication1.ViewModels;
 
 public class ThingyListViewModel: ViewModelBase
@@ -41,4 +43,10 @@ public class ThingyListViewModel: ViewModelBase
 
   public ObservableCollection<ThingyViewModel> Things { get; init; }
 
+  public ThingyViewModel? SelectedThingy 
+  {
+    get => _selectedThingy;
+    set { this.RaiseAndSetIfChanged(ref _selectedThingy, value); }
+  }
+  private ThingyViewModel? _selectedThingy;
 }
