@@ -3,9 +3,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:AvaloniaApplication1.ViewModels"
+             xmlns:views="clr-namespace:AvaloniaApplication1.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaApplication1.Views.MainView"
              x:DataType="vm:MainViewModel">
+  <UserControl.Styles>
+    <Style Selector="Border.rounded">
+      <Setter Property="Margin" Value="5"/>
+      <Setter Property="CornerRadius" Value="20"/>
+      <Setter Property="MinHeight" Value="30"/>
+    </Style>
+  </UserControl.Styles>
   <Design.DataContext>
     <!-- This only sets the DataContext for the previewer in an IDE,
          to set the actual DataContext for runtime, set the DataContext property in code
@@ -19,13 +27,13 @@
                VerticalAlignment="Center"
                DockPanel.Dock="Top"/>
     <StackPanel MinWidth="300" Background="#44006600">
-      <Border Margin="5" CornerRadius="15" Background="#44000000">
+      <Border Classes="rounded" Background="#44000000">
         <TextBlock Text="One" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
       </Border>
-      <Border Margin="5" CornerRadius="15" Background="#44808080">
+      <Border Classes="rounded" Background="#44808080">
         <TextBlock Text="Two" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
       </Border>
-      <Border Margin="5" CornerRadius="15" Background="#44ffffff">
+      <Border Classes="rounded" Background="#44ffffff">
         <TextBlock Text="Three" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
       </Border>
 
@@ -62,6 +70,9 @@
       <ButtonSpinner ButtonSpinnerLocation="Right" Content="42"></ButtonSpinner>
 
     </StackPanel>
-    <Button HorizontalAlignment="Center" VerticalAlignment="Center">Click me!</Button>
+    <DockPanel>
+      <Button HorizontalAlignment="Center" DockPanel.Dock="Top">Click me!</Button>
+      <views:ThingyListView DataContext="{Binding Thingies}"/>
+    </DockPanel>
   </DockPanel>
 </UserControl>
